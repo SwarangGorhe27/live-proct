@@ -1,0 +1,75 @@
+# Virtual Environments
+backend_env/
+backend_env_train/
+venv/
+env/
+.venv/
+
+# Node Modules
+frontend/node_modules/
+frontend/build/
+frontend/_recover/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Database
+*.db
+proctoring.db
+
+# Evidence/Data (webcam snapshots — do not commit)
+data/evidence/
+backend/data/evidence/
+**/data/evidence/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Training artifacts
+runs/
+*.pt
+!yolov8n.pt
+
+# Temporary files
+*.tmp
+*.temp
+.env
+.env.local
+
+# Test outputs
+test_results/
+coverage/
+.pytest_cache/

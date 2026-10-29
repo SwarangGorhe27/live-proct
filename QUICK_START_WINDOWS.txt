@@ -1,0 +1,117 @@
+# Windows Quick Start - Live Proctoring
+
+## Prerequisites (Do Once)
+
+1. **Install Python 3.10+**
+   - Download from https://www.python.org/downloads/
+   - ✅ Check "Add Python to PATH" during installation
+
+2. **Install Node.js 14+**
+   - Download from https://nodejs.org/
+   - ✅ Check "npm package manager"
+
+## Setup (Do Once)
+
+**Open Command Prompt as Administrator:**
+
+```cmd
+cd path\to\live_proctoring\backend
+setup_env.bat
+```
+
+This creates the virtual environment and installs all dependencies.
+
+## Running the System
+
+**Terminal 1 (Backend):**
+```cmd
+cd path\to\live_proctoring\backend
+start_server.bat
+```
+→ Server starts on `http://127.0.0.1:8000`
+
+**Terminal 2 (Frontend):**
+```cmd
+cd path\to\live_proctoring\frontend
+npm start
+```
+→ Browser opens to `http://localhost:3000`
+
+**Allow camera access** → System is ready!
+
+## Stopping the System
+
+**Backend**: Press `Ctrl+C` in backend terminal
+
+**Frontend**: Press `Ctrl+C` in frontend terminal
+
+## Useful Commands
+
+| Task | Command |
+|------|---------|
+| Check if backend is running | `netstat -ano \| findstr :8000` |
+| Kill Python process | `taskkill /F /IM python.exe` |
+| View error logs | `type %TEMP%\proctoring_server.log` |
+| Clean database | `del %cd%\proctoring.db` |
+| Check Python version | `python --version` |
+
+## Troubleshooting
+
+### "Python is not recognized"
+- Reinstall Python and check "Add Python to PATH"
+- Restart Command Prompt after installation
+
+### "Port 8000 already in use"
+- Change port in `start_server.bat` (line: `--port 8000`)
+- Update frontend in `src/App.js` (line: `const WS_URL = ...`)
+
+### "npm not found"
+- Reinstall Node.js and check "npm package manager" option
+
+### "No camera access"
+- Grant camera permission to browser
+- Check Windows privacy settings (Settings → Privacy → Camera)
+
+### "Models not loading"
+- Ensure `backend/models/` folder has:
+  - `yolov8n.pt`
+  - `deploy.prototxt`
+  - `res10_300x300_ssd_iter_140000.caffemodel`
+
+## File Locations
+
+```
+C:\path\to\live_proctoring\
+├── backend\
+│   ├── start_server.bat        ← Click to start server
+│   ├── setup_env.bat           ← Click to install
+│   ├── proctoring.db           ← Database (auto-created)
+│   └── backend_env\            ← Python environment
+│
+└── frontend\
+    ├── src\
+    └── package.json
+```
+
+## Video/Browser Compatibility
+
+| Browser | Webcam | WebSocket | Status |
+|---------|--------|-----------|--------|
+| Chrome 90+ | ✅ | ✅ | Fully supported |
+| Firefox 88+ | ✅ | ✅ | Fully supported |
+| Edge 90+ | ✅ | ✅ | Fully supported |
+| Safari | ✅ | ✅ | Works (needs HTTPS for HTTPS site) |
+
+## For Detailed Documentation
+
+- **Windows Setup Guide**: `WINDOWS_SETUP.md`
+- **System Overview**: `README.md`
+- **Usage Guide**: `USAGE_GUIDE.md`
+- **Compatibility Info**: `WINDOWS_COMPATIBILITY.md`
+
+---
+
+**Last Updated**: December 8, 2025  
+**OS**: Windows 10/11  
+**Python**: 3.10+  
+**Node.js**: 14+
