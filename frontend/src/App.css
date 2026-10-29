@@ -1,0 +1,134 @@
+.App {
+  min-height: 100vh;
+  padding: 1.25rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.student-id {
+  margin: 0;
+  color: #555;
+}
+
+.warning-counter {
+  margin-left: auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 1rem;
+}
+
+@media (max-width: 860px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.video-container {
+  position: relative;
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.video-feed {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+
+.overlay-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.status-badge {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  max-width: 90%;
+}
+
+.setup-panel {
+  background: #fff;
+  border: 1px solid #e2e6ea;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.student-input {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #ccd3da;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.btn,
+.btn-start,
+.btn-stop {
+  border: none;
+  border-radius: 6px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-start {
+  background: #1f7a3f;
+  color: #fff;
+}
+
+.btn-stop {
+  background: #b33a3a;
+  color: #fff;
+}
+
+.btn {
+  background: #e9eef3;
+  color: #222;
+}
+
+.session-summary {
+  background: #f8fafc;
+  border: 1px solid #dde3ea;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.calibration {
+  color: #666;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}

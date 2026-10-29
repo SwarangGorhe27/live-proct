@@ -1,0 +1,4 @@
+train: ../dataset_aug/images/train
+val: ../dataset_aug/images/val
+nc: 2
+names: ['face','cellphone']

@@ -1,0 +1,39 @@
+{
+  "folders": [
+    {
+      "path": "backend",
+      "name": "🔙 Backend (FastAPI)"
+    },
+    {
+      "path": "frontend",
+      "name": "🎨 Frontend (React)"
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder:Backend}/backend_env/bin/python",
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "[python]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "ms-python.python"
+    },
+    "[javascript]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/node_modules": true,
+      "**/.pytest_cache": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "thunder.rest-client"
+    ]
+  }
+}

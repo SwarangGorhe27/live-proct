@@ -1,0 +1,6 @@
+# Example dataset YAML for ultralytics YOLO training
+train: ../dataset/images/train
+val: ../dataset/images/val
+
+nc: 2
+names: ['face','cellphone']
